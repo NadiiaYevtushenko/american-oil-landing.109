@@ -6,7 +6,7 @@
     <script src='assets/js/jquery.min.js'></script>
     <script src='assets/js/intlTelInput.js'></script>
     <link href='assets/css/article.rs.css' rel='stylesheet' />
-    <!-- <script src='https://unpkg.com/libphonenumber-js@1.10.54/bundle/libphonenumber-mobile.js'></script> -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.css">
     <script src='assets/js/libphonenumber-mobile.js'></script>
     <title>US national debt tracker: See how much money the government owes in real time | Fox Business</title>
     <meta data-n-head="ssr" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -3546,9 +3546,21 @@
                     autoPlaceholder: 'aggressive',
                     separateDialCode: true,
                     onlyCountries: [
-                        "US"
+                        "us",
+                        "uk",
+                        "ru",
+                        "de",
+                        "fr",
+                        "it",
+                        "es",
+                        "pl",
+                        "nl",
+                        "gr",
                     ],
-                    initialCountry: '',
+                    preferredCountries: [
+                        "us"
+                    ],
+                    initialCountry: 'us',
                 });
 
                 tel_input.addEventListener('input', () => {
